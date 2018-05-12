@@ -20,21 +20,14 @@ class App extends React.Component {
       console.log(data);
 
     }
-
+    
     render() {
-
       return (
-
         <div>
-
           <Titles/>
-
           <Form getWeather = {this.getWeather}/>
-
           <br/>
           <Weather/>
-          
-
           </div>
 
       );
