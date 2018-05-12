@@ -10,9 +10,9 @@ const API_KEY = "717d8258895a8589755edb6bc0463525";
 class App extends React.Component {
   
   state = {
-    temperature: undefined,
     city: undefined,
     country: undefined,
+    temperature: undefined,
     humidity: undefined,
     description: undefined,
     error: undefined
@@ -48,7 +48,19 @@ class App extends React.Component {
           <Titles/>
           <Form getWeather = {this.getWeather}/>
           <br/>
-          <Weather/>
+          <Weather 
+            temperature = {this.state.temperature}
+            city = {this.state.city}
+            country = {this.state.country}
+            humidity = {this.state.humidity}
+            description = {this.state.description}
+            error = {this.state.error}
+          
+          
+          
+          
+          
+          />
           </div>
 
       );
