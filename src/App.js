@@ -1,17 +1,11 @@
 
 import React from 'react';
-
 import Titles from "./components/Titles.js";  // you can leave out the .js extension here.
-
 import Form from "./components/Form.js";
-
 import Weather from './components/Weather.js';
 
 
 const API_KEY = "717d8258895a8589755edb6bc0463525";
-;
-
-
 
 class App extends React.Component {
 
