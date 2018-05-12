@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Titles from "./components/Titles.js";  // you can leave out the .js extension here.
 import Form from "./components/Form.js";
@@ -15,7 +14,7 @@ class App extends React.Component {
     humidity: undefined,
     description: undefined,
     error: undefined
-  }
+  };
 
     getWeather = async (e) => {
 
@@ -29,8 +28,6 @@ class App extends React.Component {
       const data = await api_call.json();  // json function method efficiently converts api data we receive into a readerble format. 
 
       if (city && country) {
-          console.log(data);
-
           this.setState({
             temperature: data.main.temp,
             city: data.name,
@@ -74,21 +71,3 @@ class App extends React.Component {
 }
 
 export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
