@@ -16,8 +16,6 @@ class App extends React.Component {
     humidity: undefined,
     description: undefined,
     error: undefined
-    
-
   }
 
     getWeather = async (e) => {
@@ -32,6 +30,15 @@ class App extends React.Component {
       const data = await api_call.json();  // json method efficiently converts api data we receive into a readerble form. 
 
       console.log(data);
+
+      this.setState({
+        temperature: data.main.temp,
+        city: data.name,
+        country: data.sys.country,
+        humidity: data.main.humidity,
+        description: data.weather[0].description,
+        error: ""
+      });
 
     }
 
