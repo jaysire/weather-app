@@ -48,7 +48,7 @@ class App extends React.Component {
           country: undefined,
           humidity: undefined,
           description: undefined,
-          error: "Plese Enter the Values."
+          error: "Plese enter City and State to check weather"
       });
       }
       }
