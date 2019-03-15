@@ -6,7 +6,7 @@ import Weather from './components/Weather.js';
 const API_KEY = "717d8258895a8589755edb6bc0463525";
 
 class App extends React.Component {
-  
+
   state = {
     city: undefined,
     country: undefined,
@@ -24,8 +24,8 @@ class App extends React.Component {
       const country = e.target.elements.country.value;
 
       const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`);
-      
-      const data = await api_call.json();  // json function method efficiently converts api data we receive into a readerble format. 
+
+      const data = await api_call.json();  // json function method efficiently converts api data we receive into a readable format.
 
       if (city && country) {
           this.setState({
@@ -36,7 +36,7 @@ class App extends React.Component {
             description: data.weather[0].description,
             error: ""
         });
-  
+
       } else {
 
         this.setState({
@@ -45,7 +45,7 @@ class App extends React.Component {
           country: undefined,
           humidity: undefined,
           description: undefined,
-          error: "Plese enter City and State to check weather"
+          error: "Please enter City and State to check weather"
       });
       }
       }
@@ -54,15 +54,15 @@ class App extends React.Component {
       return (
         <div>
           <div className="wrapper">
-            <div clssName="main">
+            <div className="main">
               <div className="container">
                 <div className="row">
                   <div className="col-xs-5 title-container">
-                   <Titles/>   
+                  <Titles/>
                     </div>
                       <div className="col-xs-7 form-container">
                         <Form getWeather = {this.getWeather}/>
-                        <Weather 
+                        <Weather
                         temperature = {this.state.temperature}
                         city = {this.state.city}
                         country = {this.state.country}
@@ -71,7 +71,7 @@ class App extends React.Component {
                         error = {this.state.error}
                     />
                   </div>
-                </div> 
+                </div>
               </div>
             </div>
           </div>

@@ -1,0 +1,8 @@
+{
+    "eslint.enable": false,
+    "jshint.enable": false,
+    "tslint.enable": false,
+    "cSpell.words": [
+        "homescreen"
+    ]
+}
